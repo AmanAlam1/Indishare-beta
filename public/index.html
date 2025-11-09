@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>IndiShare — Demo</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>IndiShare</h1>
+    <p class="tagline">Connecting India through shared data</p>
+    <div id="app">
+      <h2>Demo: Send data</h2>
+      <label>Sender Phone: <input id="from" placeholder="+9198..." /></label><br/>
+      <label>Receiver Phone: <input id="to" placeholder="+9199..." /></label><br/>
+      <label>Bytes (e.g., 1048576 = 1MB): <input id="bytes" value="1048576" /></label><br/>
+      <button id="requestOtp">Request OTP (sender)</button>
+      <div id="otpSection" style="display:none;">
+        <label>OTP: <input id="otp" /></label>
+        <button id="verifyOtp">Verify & Get Token</button>
+      </div>
+      <div id="tokenArea" style="display:none;">
+        <p>Token acquired. You can now create a transfer.</p>
+        <button id="createTransfer">Create Transfer</button>
+      </div>
+      <div id="result"></div>
+    </div>
+    <p>Contact: Aman Alam — <a href="mailto:amanalam9115@gmail.com">amanalam9115@gmail.com</a></p>
+  </div>
+<script src="/app.js"></script>
+</body>
+</html>

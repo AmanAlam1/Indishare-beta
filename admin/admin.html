@@ -1,0 +1,13 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>IndiShare Admin</title></head><body style="font-family:Arial,Helvetica,sans-serif;padding:20px;">
+<h1>IndiShare — Admin Dashboard (Demo)</h1>
+<p>Founder: Aman Alam — <a href="mailto:amanalam9115@gmail.com">amanalam9115@gmail.com</a></p>
+<div id="metrics"><button id="load">Load Metrics</button><div id="out"></div></div>
+<script>
+document.getElementById('load').onclick = async () => {
+  const r = await fetch('/admin/metrics');
+  const j = await r.json();
+  document.getElementById('out').innerText = JSON.stringify(j, null, 2);
+};
+</script>
+</body></html>
